@@ -101,8 +101,6 @@ article {
 
 img {
   max-width: 100%;
-  max-width: -webkit-fill-available;
-  max-width: -moz-available;
 }
 
 img.hero {
@@ -110,9 +108,8 @@ img.hero {
   margin-bottom: var(--padding-size);
   max-height: 60vh;
   object-fit: cover;
-  width: 100%;
-  width: -webkit-fill-available;
-  width: -moz-available;
+  width: calc(100% + var(--padding-size) * 2);
+  max-width: calc(100% + var(--padding-size) * 2);
 }
 
 aside {
