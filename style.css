@@ -4,7 +4,7 @@
 }
 
 /**
-Page container Layout
+Page Layout
 **/
 
 html,body {
@@ -21,16 +21,17 @@ body {
 }
 
 main {
+  /* Each child element is as wide as main in a single row */
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 100vw;
+  grid-auto-columns: 100%;
   grid-template-rows: 1fr;
-  height: 100%;
+
+  /* This element will overflow scroll and scroll-snap */
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 }
-
 main > article {
   scroll-snap-align: start;
 }
