@@ -43,6 +43,18 @@ main > article {
 article layout
 **/
 
+body {
+  font-family: 'Sen', sans-serif;
+}
+
+header {
+  margin-left: 2em;
+}
+
+h1, h2, h3, h4 {     
+  font-family: 'Bellota Text', cursive;
+}
+
 article {
   height: 100%;
   overflow-y: auto;
@@ -52,19 +64,35 @@ article {
 Styling
 **/
 
+h2, h1 {
+  margin: 0;
+}
+
+h3 {
+  font-size: 2em;
+}
+
 nav > ul {
   list-style: none;
   display: flex;
+  padding: 0;
+  margin-bottom: 0;
 }
 
-nav > ul >li {
-  display: inline-block;
+nav > ul > li {
+  display: inline-flex;
   flex-grow: 1;
   text-align: center;
+  border: 1px solid darksalmon;
   border-width: 1px 1px 0 0;
-  
+  background: lemonchiffon;
 }
 
+li > a {
+  padding: 1em;
+  display: inline-block;
+  flex: 1;
+}
 
 article {
   --padding-size: 1em;
@@ -80,6 +108,11 @@ img {
 img.hero {
   margin: calc(var(--padding-size) * -1);
   margin-bottom: var(--padding-size);
+  max-height: 60vh;
+  object-fit: cover;
+  width: 100%;
+  width: -webkit-fill-available;
+  width: -moz-available;
 }
 
 aside {
