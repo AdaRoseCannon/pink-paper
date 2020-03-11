@@ -6,13 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/style.css">
+    <script>
+      function replace(el,url) {
+        return fetch(url)
+          .then(r => r.text())
+          .then(str => document
+            .createRange()
+            .createContextualFragment(str)
+          ).then(fragment => {
+            el.insertAdjacentElement('afterend', fragment)
+            el.remove();
+        })
+      }
+    </script>
   </head>  
   <body>
     <header><h1>The Pink Paper</h1><h2>It's Salmon Actually</h2></header>
     <nav></nav>
     <div class="scroller">
       <main>
-        <article><script></script></article>
+        <article><script>replace(document.currentScript, './article1.html')</script></article>
         <article></article>
         <article></article>
       </main>
