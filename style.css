@@ -4,7 +4,7 @@
 }
 
 /**
-Layout
+Page container Layout
 **/
 
 html,body {
@@ -20,18 +20,15 @@ body {
   background: lightsalmon;
 }
 
-.scroller {
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-}
-
 main {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 100vw;
   grid-template-rows: 1fr;
   height: 100%;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
 main > article {
